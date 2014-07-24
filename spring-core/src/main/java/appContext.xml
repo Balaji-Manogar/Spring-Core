@@ -9,7 +9,17 @@
 		<property name="message" value="Spring Hello world..." />
 	</bean>
 	<bean id="greetingConstructorInjection" class="org.baali.spring.SpringHelloWorldConstructorInjection">
-	<constructor-arg value="Spring Hello world!!!"></constructor-arg>
+		<constructor-arg value="Spring Hello world!!!"></constructor-arg>
+	</bean>
+	<bean id="greetingReferenceSetterInjection" class="org.baali.spring.SpringHelloWorldSetterInjection">
+		<property name="message" ref="refStringData" />
+	</bean>
+	<bean id="greetingConstructorReferenceInjection" class="org.baali.spring.SpringHelloWorldConstructorInjection">
+		<constructor-arg ref="refStringData" />
+	</bean>
+	<bean id="refStringData" class="java.lang.String">
+		<constructor-arg value="From refering java.lang.string" />
 	</bean>
 	
+
 </beans>

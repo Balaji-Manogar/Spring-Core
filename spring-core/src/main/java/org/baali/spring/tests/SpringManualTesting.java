@@ -16,6 +16,10 @@ public class SpringManualTesting
 		sayHelloSetter.sayGreeting();
 		Greeting sayHelloConstructor = (Greeting) context.getBean("greetingConstructorInjection");
 		sayHelloConstructor.sayGreeting();
+		Greeting sayReferenceSetter = (Greeting)context.getBean("greetingReferenceSetterInjection");
+		sayReferenceSetter.sayGreeting();
+		Greeting sayReferenceConstructor = (Greeting)context.getBean("greetingConstructorReferenceInjection");
+		sayReferenceConstructor.sayGreeting();
 	}
 
 }
