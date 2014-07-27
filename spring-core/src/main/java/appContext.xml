@@ -20,6 +20,13 @@
 	<bean id="refStringData" class="java.lang.String">
 		<constructor-arg value="From refering java.lang.string" />
 	</bean>
-	
+	<bean id="innerBeanSetterInjection" class="org.baali.spring.SimpleInnerBeanGreeting">
+		<property name="g">
+			<bean class="org.baali.spring.SpringHelloWorldSetterInjection">
+				<property name="message" value="From Inner Bean: Hello spring"></property>
+			</bean>
+		</property>
+	</bean>
+
 
 </beans>

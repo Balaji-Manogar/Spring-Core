@@ -3,6 +3,7 @@ package org.baali.spring.tests;
 import java.applet.AppletContext;
 
 import org.baali.spring.greeting.interfaces.Greeting;
+import org.baali.spring.greeting.interfaces.InnerBeanGreeting;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -20,6 +21,8 @@ public class SpringManualTesting
 		sayReferenceSetter.sayGreeting();
 		Greeting sayReferenceConstructor = (Greeting)context.getBean("greetingConstructorReferenceInjection");
 		sayReferenceConstructor.sayGreeting();
+		InnerBeanGreeting innerBeanSetterInjection = (InnerBeanGreeting)context.getBean("innerBeanSetterInjection");
+		innerBeanSetterInjection.sayHello();
 	}
 
 }
