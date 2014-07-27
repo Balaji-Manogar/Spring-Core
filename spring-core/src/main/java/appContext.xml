@@ -17,6 +17,7 @@
 	<bean id="greetingConstructorReferenceInjection" class="org.baali.spring.SpringHelloWorldConstructorInjection">
 		<constructor-arg ref="refStringData" />
 	</bean>
+	<!-- Java basic data type(String) bean  -->
 	<bean id="refStringData" class="java.lang.String">
 		<constructor-arg value="From refering java.lang.string" />
 	</bean>
@@ -27,6 +28,7 @@
 			</bean>
 		</property>
 	</bean>
+	<alias name="greetingSetterInjection" alias="setter-alias"/>
 
 
 </beans>
