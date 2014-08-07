@@ -17,7 +17,7 @@
 	<bean id="greetingConstructorReferenceInjection" class="org.baali.spring.SpringHelloWorldConstructorInjection">
 		<constructor-arg ref="refStringData" />
 	</bean>
-	<!-- Java basic data type(String) bean  -->
+	<!-- Java basic data type(String) bean -->
 	<bean id="refStringData" class="java.lang.String">
 		<constructor-arg value="From refering java.lang.string" />
 	</bean>
@@ -28,7 +28,18 @@
 			</bean>
 		</property>
 	</bean>
-	<alias name="greetingSetterInjection" alias="setter-alias"/>
+	<alias name="greetingSetterInjection" alias="setter-alias" />
+	<bean id="simpleListInjection" class="org.baali.spring.SimpleSpringList">
+		<property name="list">
+			<list>
+				<value>Balaji</value>
+				<value>Rajan</value>
+				<value>Monika</value>
+				<value>Revathy</value>
+			</list>
+		</property>
+	</bean>
+
 
 
 </beans>

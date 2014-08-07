@@ -2,10 +2,12 @@ package org.baali.spring.tests;
 
 import java.applet.AppletContext;
 
+import org.baali.spring.SimpleSpringList;
 import org.baali.spring.greeting.interfaces.Greeting;
 import org.baali.spring.greeting.interfaces.InnerBeanGreeting;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.core.SimpleAliasRegistry;
 
 public class SpringManualTesting
 {
@@ -23,6 +25,8 @@ public class SpringManualTesting
 		sayReferenceConstructor.sayGreeting();
 		InnerBeanGreeting innerBeanSetterInjection = (InnerBeanGreeting)context.getBean("innerBeanSetterInjection");
 		innerBeanSetterInjection.sayHello();
+		SimpleSpringList listInjection = (SimpleSpringList)context.getBean("simpleListInjection");
+		listInjection.printMessages();
 	}
 
 }
